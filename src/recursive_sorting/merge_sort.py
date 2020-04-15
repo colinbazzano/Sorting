@@ -38,3 +38,8 @@ def merge_sort(arr):
     high = merge_sort(arr[mid:])
     # return merge on both the high and low
     return merge(low, high)
+
+
+test_list = [8, 7, 6, 5, 4]
+
+print(merge_sort(test_list))
