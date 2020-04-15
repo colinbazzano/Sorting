@@ -8,22 +8,39 @@ def merge(arrA, arrB):
     # keep track of position in arrA and arrB with i and j
     # m is marking the position of the merged_arr
     i, j, m = 0, 0, 0
-    while i < len(arrA) and j < len(arrB):
+    # while i < len(arrA) and j < len(arrB):
+    for m in range(0, elements):
         print("merged_arr:", merged_arr)
-        if arrA[i] <= arrB[j]:
-            merged_arr[m] = arrA[i]
-            i += 1
-            m += 1
-        elif arrA[i] > arrB[j]:
+        if i >= len(arrA):
             merged_arr[m] = arrB[j]
             j += 1
-            m += 1
-        elif i == len(arrA):
+        elif j >= len(arrB):
             merged_arr[m] = arrA[i]
-            m += 1
-        elif j == len(arrB):
+            i += 1
+        elif arrA[i] < arrB[j]:
+            merged_arr[m] = arrA[i]
+            i += 1
+            # m += 1
+        else:
             merged_arr[m] = arrB[j]
-            m += 1
+            j += 1
+            # m += 1
+        m += 1
+        # while i < len(arrA):
+        #     merged_arr[m] = arrA[i]
+        #     i += 1
+        #     m += 1
+        # while j < len(arrB):
+        #     merged_arr[m] = arrB[j]
+        #     j += 1
+        #     m += 1
+
+        # if len(arrA) == 1:
+        #     merged_arr[m] = arrA[i]
+        #     m += 1
+        # elif len(arrB) == 1:
+        #     merged_arr[m] = arrB[j]
+        #     m += 1
 
     return merged_arr
 
@@ -47,7 +64,7 @@ def merge_sort(arr):
     # return arr
 
 
-test_list = [4, 5, 8, 3, 6, 1, 98, 34]
+test_list = [4, 5, 8, 3, 6, 1, 98, 34, 93]
 lst1 = [1, 2, 3]
 lst2 = [3, 2, 1]
 
